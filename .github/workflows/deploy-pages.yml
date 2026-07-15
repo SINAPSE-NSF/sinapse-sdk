@@ -1,0 +1,43 @@
+name: Deploy GitHub Pages
+
+# Publish the static site in docs/ whenever main changes.
+on:
+  push:
+    branches: [main]
+  # Allow manual runs from the Actions tab.
+  workflow_dispatch:
+
+# Permissions the deploy needs to publish to Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a newer push supersede an in-progress deploy, but don't cancel a
+# run mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # The whole site lives in docs/.
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
