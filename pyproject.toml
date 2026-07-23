@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sinapse-sdk"
+version = "0.0.1"
+description = "SINAPSE SDK — curated software components for AI-coupled HPC workflows (placeholder release)"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [
+    {name = "The SINAPSE project"}
+]
+
+[project.urls]
+Homepage = "http://project-sinapse.org"
+Repository = "https://github.com/SINAPSE-NSF/sinapse-sdk"
