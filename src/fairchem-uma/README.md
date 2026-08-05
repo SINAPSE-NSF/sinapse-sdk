@@ -1,17 +1,17 @@
 # fairchem-uma
 
 Run UMA energy and force inference on all `.extxyz` files under
-`../sinapse_sdk/structures`.
+`../numerical-stability-test/structures`.
 
 ## Tracked files (this demo)
 
 | Path | Role |
 |------|------|
-| `infer_energy_forces.py` | UMA energy/force inference script |
+| `infer_energy_forces.py` | UMA inference CLI + `load_uma_calculator` / `make_uma_energy_fns` for the numerical-stability evaluator |
 | `run_infer.sh` | Activates `uma312` and runs the script |
 | `README.md` | This file |
-| `../sinapse_sdk/structures/molecules/*.extxyz` | Molecule demo structures (`omol`) |
-| `../sinapse_sdk/structures/crystals/*.extxyz` | Crystal demo structures (`omat`) |
+| `../numerical-stability-test/structures/molecules/*.extxyz` | Molecule demo structures (`omol`) |
+| `../numerical-stability-test/structures/crystals/*.extxyz` | Crystal demo structures (`omat`) |
 
 ## Needed to run (not in this repo)
 
