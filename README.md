@@ -46,8 +46,10 @@ pip install sinapse-sdk
 
 ## Documentation
 
-Project documentation will be hosted on ReadTheDocs; until then, see
-the [project website](http://project-sinapse.org).
+Documentation lives in [`docs/`](docs/) and is built with Sphinx; it
+is published to [GitHub Pages](https://sinapse-nsf.github.io/sinapse-sdk/)
+and configured for hosting on ReadTheDocs (`.readthedocs.yaml`). See
+also the [project website](http://project-sinapse.org).
 
 ## License
 
