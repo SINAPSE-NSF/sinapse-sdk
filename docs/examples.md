@@ -2,6 +2,12 @@
 
 Worked examples of combining SDK components.
 
+```{toctree}
+:hidden:
+
+Silicon phonons with QuAcc and Rootstock <quacc-rootstock-phonons/index>
+```
+
 ## Materials science: calculate phonons with QuAcc and Rootstock
 
 [Compute phonon properties of crystalline silicon with two different machine-learned interatomic potentials.](quacc-rootstock-phonons/index.md)
@@ -10,9 +16,3 @@ Worked examples of combining SDK components.
 
 Planned: a biomolecular rate-constant example combining AsyncFlow and
 SEEKRFLOW.
-
-```{toctree}
-:hidden:
-
-quacc-rootstock-phonons/index
-```
