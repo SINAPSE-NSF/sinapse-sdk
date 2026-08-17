@@ -12,6 +12,7 @@ release = "0.0.1"
 
 extensions = [
     "myst_parser",
+    "sphinx_design",
 ]
 
 # Pages are written in MyST markdown.
