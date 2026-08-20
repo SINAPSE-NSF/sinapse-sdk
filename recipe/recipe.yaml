@@ -1,0 +1,66 @@
+# conda-forge recipe (v1 format) for the sinapse-sdk meta-package.
+# Reference copy — the authoritative copy lives in the conda-forge
+# feedstock once submitted. Submission waits until the component
+# feedstocks (rhapsody-py, radical.asyncflow, radical.orbit) exist on
+# conda-forge; then `conda install sinapse-sdk` pulls a mutually
+# compatible component set.
+schema_version: 1
+
+context:
+  name: sinapse-sdk
+  version: "0.0.1"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/s/sinapse-sdk/sinapse_sdk-${{ version }}.tar.gz
+  sha256: e3886c3c8c18b77d48eea53e03bd0e5979eba506cf9eeb35487d5f11b1915a92
+
+build:
+  number: 0
+  noarch: python
+  script: python -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=77
+    - pip
+  run:
+    # meta-package: pulls the SDK component packages
+    # (radical.orbit floors the stack at python >=3.10)
+    - python >=${{ python_min }}
+    - rhapsody-py
+    - radical.asyncflow
+    - radical.orbit
+
+tests:
+  - python:
+      imports:
+        - sinapse_sdk
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  homepage: http://project-sinapse.org
+  summary: SINAPSE SDK — curated software components for AI-coupled HPC workflows
+  description: |
+    The SINAPSE SDK is a curated collection of software components for
+    AI-coupled HPC workflows (NSF award 2514139). This meta-package
+    installs a mutually compatible set of the released components:
+    RHAPSODY (rhapsody-py), AsyncFlow (radical.asyncflow), and ORBIT
+    (radical.orbit). Further components (Rootstock, SEEKRFLOW, QuAcc)
+    join as their conda packaging lands. The Dragon backend for
+    RHAPSODY is PyPI-only: `pip install dragonhpc` into the conda env.
+  license: MIT
+  license_file: LICENSE
+  documentation: https://sinapse-sdk.readthedocs.io/
+  repository: https://github.com/SINAPSE-NSF/sinapse-sdk
+
+extra:
+  recipe-maintainers:
+    - andre-merzky
