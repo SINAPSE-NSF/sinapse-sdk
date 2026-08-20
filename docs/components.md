@@ -45,3 +45,10 @@ Run pre-deployed machine learned interatomic potentials on HPC clusters without 
 
 - Repository: <https://github.com/Garden-AI/rootstock>
 - Model catalog: <https://garden-ai.github.io/almanac/>
+
+## DeepDriveSim
+
+Deep learning-driven Adaptive Simulations.
+
+- Repository: <https://github.com/radical-collaboration/DeepDriveSim>
+- Documentation: <https://radical-collaboration.github.io/DeepDriveSim/>
