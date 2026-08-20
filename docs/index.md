@@ -49,6 +49,27 @@ components from their own repositories — see
 [Components](components.md).
 ```
 
+## Component documentation
+
+Repositories and documentation for the SDK and its released
+components:
+
+- SINAPSE SDK:
+  [repository](https://github.com/SINAPSE-NSF/sinapse-sdk),
+  [documentation](https://sinapse-sdk.readthedocs.io/)
+- RHAPSODY:
+  [repository](https://github.com/radical-cybertools/rhapsody),
+  [documentation](https://rhapsody-py.readthedocs.io/)
+- AsyncFlow:
+  [repository](https://github.com/radical-cybertools/radical.asyncflow),
+  [documentation](https://radicalasyncflow.readthedocs.io/)
+- ORBIT (remote access to RHAPSODY services):
+  [repository](https://github.com/radical-cybertools/radical.orbit),
+  [documentation](https://radicalorbit.readthedocs.io/)
+
+The full component list, including package links, is on the
+[Components](components.md) page.
+
 ## Acknowledgment
 
 This work is supported by the National Science Foundation under award

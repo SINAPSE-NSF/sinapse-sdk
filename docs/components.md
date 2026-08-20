@@ -9,14 +9,19 @@ RADICAL-Pilot). RHAPSODY orchestrates coupled AI-and-simulation
 ensembles across heterogeneous resources.
 
 - Repository: <https://github.com/radical-cybertools/rhapsody>
-- Documentation: <https://radical-cybertools.github.io/rhapsody/>
+- Documentation: <https://rhapsody-py.readthedocs.io/>
 - PyPI: <https://pypi.org/project/rhapsody-py/>
+- Remote access (RHAPSODY-as-a-Service) via ORBIT:
+  <https://github.com/radical-cybertools/radical.orbit>, documented at
+  <https://radicalorbit.readthedocs.io/>
 
 ## AsyncFlow
 
 Asynchronous workflow layer for scalable HPC pipelines.
 
 - Repository: <https://github.com/radical-cybertools/radical.asyncflow>
+- Documentation: <https://radicalasyncflow.readthedocs.io/>
+- PyPI: <https://pypi.org/project/radical-asyncflow/>
 
 ## SEEKRFLOW
 
