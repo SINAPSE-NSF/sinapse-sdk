@@ -18,7 +18,7 @@ The initial SDK release targets the following components:
     (extends RADICAL-Pilot)
   - AsyncFlow — asynchronous workflow layer
   - Rootstock — interchangeable containerized AI models
-  - [SEEKRFLOW] (https://github.com/seekrcentral/seekrflow) — 
+  - [Seekrflow](https://github.com/seekrcentral/seekrflow) — 
     biomolecular rate-constant estimation
   - [QuAcc](https://github.com/Quantum-Accelerators/quacc) — quantum
     chemistry workflow recipes
@@ -71,8 +71,8 @@ Chicago, Princeton University, UC San Diego).
   - Docs: https://radical-cybertools.github.io/rhapsody/
   - Pypi: https://pypi.org/project/rhapsody-py/
 
-### SEEKRFLOW
+### Seekrflow
 
   - Repo: https://github.com/seekrcentral/seekrflow
-  - Docs: https://github.com/seekrcentral/seekrflow/tree/main/docs
-  - SEEKR2 Docs: https://seekr2.readthedocs.io/en/latest/citations.html
+  - Docs: https://seekrflow.readthedocs.io/en/latest/
+  - Seekr Docs: https://seekr.readthedocs.io/en/latest/

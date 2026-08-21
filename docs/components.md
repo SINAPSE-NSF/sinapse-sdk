@@ -23,13 +23,13 @@ Asynchronous workflow layer for scalable HPC pipelines.
 - Documentation: <https://radicalasyncflow.readthedocs.io/>
 - PyPI: <https://pypi.org/project/radical-asyncflow/>
 
-## SEEKRFLOW
+## Seekrflow
 
-Biomolecular rate-constant estimation workflows built on SEEKR2.
+Biomolecular rate-constant estimation workflows built on SEEKR.
 
 - Repository: <https://github.com/seekrcentral/seekrflow>
-- Documentation: <https://github.com/seekrcentral/seekrflow/tree/main/docs>
-- SEEKR2 documentation: <https://seekr2.readthedocs.io/en/latest/>
+- Documentation: <https://seekrflow.readthedocs.io/en/latest>
+- SEEKR documentation: <https://seekr.readthedocs.io/en/latest/>
 
 ## QuAcc
 
