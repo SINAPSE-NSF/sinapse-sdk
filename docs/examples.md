@@ -7,6 +7,7 @@ Worked examples of combining SDK components.
 
 Silicon phonons with QuAcc and Rootstock <quacc-rootstock-phonons/index>
 Adaptive MD campaign with DeepDriveSim <ddsim-asyncflow-rhapsody/index>
+Protein-ligand kinetics with Seekrflow <seekrflow-asyncflow-trypsin/index>
 ```
 
 **Materials science:** [Calculate silicon phonons with QuAcc and
