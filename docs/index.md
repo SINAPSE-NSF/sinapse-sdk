@@ -66,6 +66,9 @@ components:
 - ORBIT (remote access to RHAPSODY services):
   [repository](https://github.com/radical-cybertools/radical.orbit),
   [documentation](https://radicalorbit.readthedocs.io/)
+- DeepDriveSim (Deep learning-driven Adaptive Simulations):
+  [repository](https://github.com/radical-collaboration/DeepDriveSim),
+  [documentation](https://radical-collaboration.github.io/DeepDriveSim/)
 
 The full component list, including package links, is on the
 [Components](components.md) page.

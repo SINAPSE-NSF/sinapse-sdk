@@ -16,12 +16,15 @@ The initial SDK release targets the following components:
   - [RHAPSODY](https://github.com/radical-cybertools/rhapsody) —
     unified AI+HPC runtime supporting services alongside tasks
     (extends RADICAL-Pilot)
-  - AsyncFlow — asynchronous workflow layer
+  - [AsyncFlow](https://github.com/radical-cybertools/radical.asyncflow) —
+    asynchronous workflow layer
   - Rootstock — interchangeable containerized AI models
   - [Seekrflow](https://github.com/seekrcentral/seekrflow) — 
     biomolecular rate-constant estimation
   - [QuAcc](https://github.com/Quantum-Accelerators/quacc) — quantum
     chemistry workflow recipes
+  - [DeepDriveSim](https://github.com/radical-collaboration/DeepDriveSim) —
+    Deep learning-driven Adaptive Simulations
 
 Components are classed as *core*, *associated*, or *external*; the set
 of covered integrations will grow over subsequent releases.
@@ -76,3 +79,8 @@ Chicago, Princeton University, UC San Diego).
   - Repo: https://github.com/seekrcentral/seekrflow
   - Docs: https://seekrflow.readthedocs.io/en/latest/
   - Seekr Docs: https://seekr.readthedocs.io/en/latest/
+
+### DeepDriveSim
+
+  - Repo: https://github.com/radical-collaboration/DeepDriveSim
+  - Docs: https://radical-collaboration.github.io/DeepDriveSim/
