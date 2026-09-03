@@ -1,15 +1,16 @@
-# AI-steered adaptive MD ensemble with DeepDriveSim, AsyncFlow, and Rhapsody
+# AI-Steered Adaptive Scientific Campaigns with DeepDriveSim, AsyncFlow, and RHAPSODY
 
-Real molecular dynamics (MD) campaigns face a hard resource challenge: 
-you cannot know in advance which trajectories will explore scientifically interesting 
-regions of configuration space, yet every GPU spent on a dead-end trajectory 
-is one that could be running a more productive simulation.
+Large-scale scientific campaigns face a fundamental resource challenge:
+it is often impossible to know in advance which simulations or computational
+experiments will produce the most scientifically valuable results, yet every
+resource spent on low-value candidates could instead be used to explore more
+promising regions of the scientific search space.
 
-**DeepDriveSim (DDS)** solves this with a closed AI-in-the-loop cycle.
-An ML surrogate model is trained on completed trajectories and then used to
-score *running* simulations. Simulations predicted to be low-utility are
-cancelled, their resources are immediately freed, and new simulations are
-launched in their place — all without human intervention.
+**DeepDriveSim (DDS)** addresses this challenge through a closed AI-in-the-loop cycle.
+An ML surrogate model is trained on completed simulations or experiments and used
+to evaluate ongoing candidates. Low-utility candidates can be cancelled, their resources
+immediately released, and new candidates launched based on the latest model
+predictions—all without human intervention.
 
 ![DeepDriveSim adaptive control loop](ddsim_control_loop.png)
 
@@ -100,7 +101,7 @@ same asyncio event loop tick, without waiting for a scheduler allocation.
 
 ## Running the tutorial workflow
 
-`DummyWorkflow` replaces real MD and ML code with fast shell scripts so the
+`DummyWorkflow` replaces real simulation and ML code with fast shell scripts so the
 full loop runs on any machine:
 
 ```python
@@ -140,7 +141,7 @@ await run()
 surrogate score falls below it is cancelled and its slot is immediately
 reassigned to a new simulation from `sim_task_queue`.
 
-## Plugging in a real MD code
+## Plugging in a real simulation code
 
 Subclass `DummyWorkflow` (or `DDSimManager` directly) and override
 `register_tasks()` to build the shell command for your executable.
@@ -148,7 +149,7 @@ AsyncFlow's `@flow.executable_task` decorator turns the returned command string
 into a task that the backend submits and tracks:
 
 ```python
-class MyMDWorkflow(DummyWorkflow):
+class MySimWorkflow(DummyWorkflow):
 
     def register_tasks(self):
 
@@ -179,7 +180,7 @@ from rhapsody.backends import DragonExecutionBackend
 
 engine = await DragonExecutionBackend()
 asyncflow = await WorkflowEngine.create(engine)
-workflow = MyMDWorkflow(config=config, asyncflow=asyncflow)
+workflow = MySimWorkflow(config=config, asyncflow=asyncflow)
 await workflow.start()
 ```
 
