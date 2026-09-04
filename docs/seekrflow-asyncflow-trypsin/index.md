@@ -5,6 +5,9 @@ binding and unbinding kinetics for a host-guest system - a common
 benchmark system for computational methods to predict biomolecular
 interactions.
 
+![Integration of SEEKR into SINAPSE SDK to obtain estimates and ranking of binding kinetics by compound. The subsequent results will backpropagate into the refinement of protocols and the training of AI models.
+](seekr_sinapse.png)
+
 We will use two SINAPSE SDK components:
 
 - **[Seekrflow](https://github.com/seekrcentral/seekrflow)** performs the calculations that will predict the kinetics.
@@ -60,6 +63,8 @@ mamba install openmm cuda-nvrtc=##.# cuda-version=##.#
 Where, of course, you replace the '##.#' with whatever Cuda version you have
 installed, found using `nvidia-smi` or other such program.
 
+## Run Example
+
 Next, find the host-guest example directory and run the example:
 
 ```sh
@@ -74,5 +79,8 @@ experimentally-measured k-off for this compound is 3.8e8 1/s. This calculation
 is artificially truncated for demonstration purposes - a true seekr 
 calculation should simulate much longer. The generated images can be 
 seen in ~/test_seekr/images_and_plots.
+
+![This example plot shows how the free energy profile across anchors is automatically computed and plotted following the analyze stage.
+](free_energy_profile_milestones.png)
 
 
