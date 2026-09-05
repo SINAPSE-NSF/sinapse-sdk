@@ -4,8 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sinapse-sdk"
-version = "0.0.1"
-description = "SINAPSE SDK — curated software components for AI-coupled HPC workflows (placeholder release)"
+version = "0.1.0"
+description = "SINAPSE SDK — curated software components for AI-coupled HPC workflows"
+dependencies = [
+    "rhapsody-py>=0.5.0",
+    "radical.asyncflow>=0.5.0",
+    "quacc",
+    "rootstock",
+]
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]

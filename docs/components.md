@@ -11,9 +11,6 @@ ensembles across heterogeneous resources.
 - Repository: <https://github.com/radical-cybertools/rhapsody>
 - Documentation: <https://rhapsody-py.readthedocs.io/>
 - PyPI: <https://pypi.org/project/rhapsody-py/>
-- Remote access (RHAPSODY-as-a-Service) via ORBIT:
-  <https://github.com/radical-cybertools/radical.orbit>, documented at
-  <https://radicalorbit.readthedocs.io/>
 
 ## AsyncFlow
 
