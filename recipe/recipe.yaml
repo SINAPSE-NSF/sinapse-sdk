@@ -1,14 +1,13 @@
 # conda-forge recipe (v1 format) for the sinapse-sdk meta-package.
 # Reference copy — the authoritative copy lives in the conda-forge
-# feedstock once submitted. Submission waits until the component
-# feedstocks (rhapsody-py, radical.asyncflow, radical.orbit) exist on
-# conda-forge; then `conda install sinapse-sdk` pulls a mutually
-# compatible component set.
+# feedstock once submitted. `conda install sinapse-sdk` pulls a
+# mutually compatible component set.
+# TODO before submission: release 0.1.0 on PyPI, fill in sha256.
 schema_version: 1
 
 context:
   name: sinapse-sdk
-  version: "0.0.1"
+  version: "0.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -16,7 +15,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sinapse-sdk/sinapse_sdk-${{ version }}.tar.gz
-  sha256: e3886c3c8c18b77d48eea53e03bd0e5979eba506cf9eeb35487d5f11b1915a92
+  sha256: TODO-fill-after-0.1.0-release
 
 build:
   number: 0
@@ -30,11 +29,11 @@ requirements:
     - pip
   run:
     # meta-package: pulls the SDK component packages
-    # (radical.orbit floors the stack at python >=3.10)
     - python >=${{ python_min }}
-    - rhapsody-py
-    - radical.asyncflow
-    - radical.orbit
+    - rhapsody-py >=0.5.0
+    - radical.asyncflow >=0.5.0
+    - quacc
+    - rootstock
 
 tests:
   - python:
@@ -52,10 +51,10 @@ about:
     The SINAPSE SDK is a curated collection of software components for
     AI-coupled HPC workflows (NSF award 2514139). This meta-package
     installs a mutually compatible set of the released components:
-    RHAPSODY (rhapsody-py), AsyncFlow (radical.asyncflow), and ORBIT
-    (radical.orbit). Further components (Rootstock, SEEKRFLOW, QuAcc)
-    join as their conda packaging lands. The Dragon backend for
-    RHAPSODY is PyPI-only: `pip install dragonhpc` into the conda env.
+    RHAPSODY (rhapsody-py), AsyncFlow (radical.asyncflow), QuAcc, and
+    Rootstock. Further components (seekrflow, DDSim) join as their
+    packaging lands. The Dragon backend for RHAPSODY is PyPI-only:
+    `pip install dragonhpc` into the conda env.
   license: MIT
   license_file: LICENSE
   documentation: https://sinapse-sdk.readthedocs.io/

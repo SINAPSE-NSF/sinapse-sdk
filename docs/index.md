@@ -63,9 +63,6 @@ components:
 - AsyncFlow:
   [repository](https://github.com/radical-cybertools/radical.asyncflow),
   [documentation](https://radicalasyncflow.readthedocs.io/)
-- ORBIT (remote access to RHAPSODY services):
-  [repository](https://github.com/radical-cybertools/radical.orbit),
-  [documentation](https://radicalorbit.readthedocs.io/)
 - DeepDriveSim (Deep learning-driven Adaptive Simulations):
   [repository](https://github.com/radical-collaboration/DeepDriveSim),
   [documentation](https://radical-collaboration.github.io/DeepDriveSim/)
