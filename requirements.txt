@@ -1,0 +1,4 @@
+rhapsody-py>=0.5.0
+radical.asyncflow>=0.5.0
+quacc
+rootstock

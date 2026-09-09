@@ -4,14 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sinapse-sdk"
-version = "0.1.0"
 description = "SINAPSE SDK — curated software components for AI-coupled HPC workflows"
-dependencies = [
-    "rhapsody-py>=0.5.0",
-    "radical.asyncflow>=0.5.0",
-    "quacc",
-    "rootstock",
-]
+dynamic = ["version", "dependencies"]
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
@@ -23,3 +17,11 @@ authors = [
 [project.urls]
 Homepage = "http://project-sinapse.org"
 Repository = "https://github.com/SINAPSE-NSF/sinapse-sdk"
+
+# meta-package: ships no code, only the dependency set
+[tool.setuptools]
+packages = []
+
+[tool.setuptools.dynamic]
+version = {file = "VERSION"}
+dependencies = {file = "requirements.txt"}
