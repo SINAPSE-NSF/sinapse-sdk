@@ -35,10 +35,9 @@ requirements:
     - quacc
     - rootstock
 
+# meta-package installs no module of its own, so no import test
 tests:
   - python:
-      imports:
-        - sinapse_sdk
       pip_check: true
       python_version:
         - ${{ python_min }}.*
