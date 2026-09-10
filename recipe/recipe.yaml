@@ -7,7 +7,7 @@ schema_version: 1
 
 context:
   name: sinapse-sdk
-  version: "0.1.0"
+  version: "0.1.1"
 
 package:
   name: ${{ name|lower }}
@@ -15,7 +15,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sinapse-sdk/sinapse_sdk-${{ version }}.tar.gz
-  sha256: TODO-fill-after-0.1.0-release
+  sha256: TODO-fill-after-0.1.1-release
 
 build:
   number: 0
@@ -34,6 +34,7 @@ requirements:
     - radical.asyncflow >=0.5.0
     - quacc
     - rootstock
+    - ddsim >=0.2.1
 
 # meta-package installs no module of its own, so no import test
 tests:
