@@ -3,6 +3,12 @@ For a list of open issues and known problems, see
 https://github.com/SINAPSE-NSF/sinapse-sdk/issues/
 
 
+0.1.1 Release                                                         2026-09-10
+--------------------------------------------------------------------------------
+
+  - add DDSim (ddsim>=0.2.0) to the SDK component set
+
+
 0.1.0 Release                                                         2026-09-09
 --------------------------------------------------------------------------------
 
