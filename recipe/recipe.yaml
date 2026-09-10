@@ -34,7 +34,7 @@ requirements:
     - radical.asyncflow >=0.5.0
     - quacc
     - rootstock
-    - ddsim >=0.2.0
+    - ddsim >=0.2.1
 
 # meta-package installs no module of its own, so no import test
 tests:
