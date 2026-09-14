@@ -15,7 +15,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/s/sinapse-sdk/sinapse_sdk-${{ version }}.tar.gz
-  sha256: TODO-fill-after-0.1.1-release
+  sha256: df6137af9ff98df8d001801b6063bd13c917b20762ce708ef8e749e89f5264cf
 
 build:
   number: 0
@@ -35,6 +35,9 @@ requirements:
     - quacc
     - rootstock
     - ddsim >=0.2.1
+    # conda-only component: Flux backend for RHAPSODY (no PyPI package;
+    # linux-only builds)
+    - flux-core
 
 # meta-package installs no module of its own, so no import test
 tests:
