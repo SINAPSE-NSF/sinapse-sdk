@@ -1,8 +1,7 @@
 # conda-forge recipe (v1 format) for the sinapse-sdk meta-package.
 # Reference copy — the authoritative copy lives in the conda-forge
-# feedstock once submitted. `conda install sinapse-sdk` pulls a
-# mutually compatible component set.
-# TODO before submission: release 0.1.0 on PyPI, fill in sha256.
+# feedstock (conda-forge/sinapse-sdk-feedstock). `conda install
+# sinapse-sdk` pulls a mutually compatible component set.
 schema_version: 1
 
 context:
@@ -18,9 +17,9 @@ source:
   sha256: df6137af9ff98df8d001801b6063bd13c917b20762ce708ef8e749e89f5264cf
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: python -m pip install . -vv --no-deps --no-build-isolation
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -35,6 +34,9 @@ requirements:
     - quacc
     - rootstock
     - ddsim >=0.2.1
+    # conda-only component: seekrflow depends on seekr and OpenMM, which
+    # have no PyPI packages
+    - seekrflow >=3.1.4
     # conda-only component: Flux backend for RHAPSODY (no PyPI package;
     # linux-only builds)
     - flux-core
@@ -54,10 +56,12 @@ about:
     The SINAPSE SDK is a curated collection of software components for
     AI-coupled HPC workflows (NSF award 2514139). This meta-package
     installs a mutually compatible set of the released components:
-    RHAPSODY (rhapsody-py), AsyncFlow (radical.asyncflow), QuAcc, and
-    Rootstock. Further components (seekrflow, DDSim) join as their
-    packaging lands. The Dragon backend for RHAPSODY is PyPI-only:
-    `pip install dragonhpc` into the conda env.
+    RHAPSODY (rhapsody-py), AsyncFlow (radical.asyncflow), QuAcc,
+    Rootstock, DeepDriveSim (ddsim), and Seekrflow, plus flux-core for
+    RHAPSODY's Flux backend. Seekrflow and Flux are conda-only, so the
+    conda package is a superset of the PyPI meta-package. The Dragon
+    backend for RHAPSODY is PyPI-only: `pip install dragonhpc` into the
+    conda env.
   license: MIT
   license_file: LICENSE
   documentation: https://sinapse-sdk.readthedocs.io/
