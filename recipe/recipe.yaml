@@ -17,7 +17,7 @@ source:
   sha256: df6137af9ff98df8d001801b6063bd13c917b20762ce708ef8e749e89f5264cf
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -40,6 +40,10 @@ requirements:
     # conda-only component: Flux backend for RHAPSODY (no PyPI package;
     # linux-only builds)
     - flux-core
+    # workaround: conda-forge pymatgen 2026.9.24 (builds 0 and 1) ships pip
+    # metadata "Version: 0.0.0" and breaks pip check via emmet-core
+    # (conda-forge/pymatgen-feedstock#203); drop once a fixed build lands
+    - pymatgen !=2026.9.24
 
 # meta-package installs no module of its own, so no import test
 tests:
