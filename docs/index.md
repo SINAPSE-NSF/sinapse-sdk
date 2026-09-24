@@ -36,18 +36,33 @@ Components mature through three levels:
 
 ## Installation
 
-Packaging is planned for pip and conda under a common namespace. Once released:
+The `sinapse-sdk` meta-package installs a mutually compatible set of
+the SDK components. The conda package is the complete set:
 
 ```console
-$ conda install sinapse-sdk
+$ conda install -c conda-forge sinapse-sdk
+```
+
+It pulls every component plus `flux-core` for RHAPSODY's Flux backend.
+It installs on Linux (x86_64 and aarch64) with Python 3.11 or newer,
+the floor set by its conda-only dependencies. The Dragon backend for
+RHAPSODY is PyPI-only: `pip install dragonhpc` into that conda
+environment.
+
+The PyPI package covers the components that have PyPI releases:
+
+```console
+$ pip install sinapse-sdk
 ```
 
 ```{note}
-The SDK is under active development and the `sinapse-sdk` package is
-currently a placeholder. Until the first release, install individual
-components from their own repositories — see
-[Components](components.md).
+Seekrflow (depends on SEEKR and OpenMM) and Flux are conda-only, so the
+pip install lacks Seekrflow and RHAPSODY's Flux backend. The pip package
+requires Python 3.9 or newer.
 ```
+
+Each component can also be installed on its own; see the package links
+on the [Components](components.md) page. Spack packaging is planned.
 
 ## Component documentation
 
